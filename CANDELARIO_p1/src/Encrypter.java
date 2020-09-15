@@ -3,7 +3,7 @@ public class Encrypter {
     public static String GrabbedInput = CANDELARIO_p1.SentInput;
     private static int NewDigit1, NewDigit2, NewDigit3, NewDigit4;
 
-
+    //To get the encrypted sequence of numbers, I used functions to help calculate, swap numbers, and output the string according to the assignment.
     public void encrypt(String GrabbedInput) {
         Calculate();
         NumberSwap();
@@ -36,6 +36,6 @@ public class Encrypter {
 
     public static void OutputToString() {
         String Output = String.format("%d%d%d%d",NewDigit1, NewDigit2, NewDigit3, NewDigit4);
-        System.out.printf("Here is your Output: %s", Output);
+        System.out.printf("%s", Output);
     }
 }

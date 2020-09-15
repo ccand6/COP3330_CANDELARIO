@@ -15,6 +15,7 @@ public class Decrypter {
         Digit3 = Character.digit(GrabbedInput.charAt(2), 10);
         Digit4 = Character.digit(GrabbedInput.charAt(3), 10);
 
+        //if statements were made in case a number would've been too large, leading to a different numerical string.
         NewDigit1 = (Digit1 + 10) - 7;
         if (NewDigit1 >= 10) NewDigit1 -= 10;
         NewDigit2 = (Digit2 + 10) - 7;
@@ -39,7 +40,7 @@ public class Decrypter {
 
     public static void OutputToString() {
         String Output = String.format("%d%d%d%d",NewDigit1, NewDigit2, NewDigit3, NewDigit4);
-        System.out.printf("Here is your Output: %s", Output);
+        System.out.printf("%s", Output);
     }
 }
 
