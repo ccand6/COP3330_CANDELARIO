@@ -8,6 +8,7 @@ public class CANDELARIO_p1 {
     Decrypter decrypt = new Decrypter();
 
     public static void main(String[] args) {
+
         GetNumber();
         Choice();
     }
@@ -44,11 +45,14 @@ public class CANDELARIO_p1 {
         if (Number == 1) {
             Encrypter encrypt = new Encrypter();
             encrypt.encrypt(SentInput);
+            System.out.printf("%s", encrypt.Output);
         }
         if (Number == 2) {
             Decrypter decrypt = new Decrypter();
             decrypt.decrypt(SentInput);
+            System.out.printf("%s", decrypt.Output);
         }
+
     }
 
 }

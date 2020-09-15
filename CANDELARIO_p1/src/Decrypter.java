@@ -1,6 +1,7 @@
 public class Decrypter {
     public static String GrabbedInput = CANDELARIO_p1.SentInput;
     private static int NewDigit1, NewDigit2, NewDigit3, NewDigit4;
+    public static String Output;
 
     public void decrypt(String GrabbedInput) {
         Calculate();
@@ -38,9 +39,9 @@ public class Decrypter {
         NewDigit2 = NewDigit2 - NewDigit4;
     }
 
-    public static void OutputToString() {
-        String Output = String.format("%d%d%d%d",NewDigit1, NewDigit2, NewDigit3, NewDigit4);
-        System.out.printf("%s", Output);
+    public static String OutputToString() {
+        Output = String.format("%d%d%d%d",NewDigit1, NewDigit2, NewDigit3, NewDigit4);
+        return Output;
     }
 }
 
