@@ -19,7 +19,6 @@ public class App {
         displayBmiStatistics(bmiData);
     }
 
-
     public static double getUserHeight() {
         Scanner Input = new Scanner(System.in);
         System.out.print("What is your height in inches?: ");
@@ -45,10 +44,16 @@ public class App {
     }
 
     public static boolean moreInput() {
-        //Scanner Input = new Scanner(System.in);
-        //System.out.print("Would you like to add another user's BMI?: Y/N");
+        char decision;
+        Scanner Input = new Scanner(System.in);
+        System.out.print("Would you like to add a user's BMI?: Y/N \n");
+        decision = Input.next().charAt(0);
+        while(decision !='y' && decision != 'n') {
+            System.out.print("Would you like to add a user's BMI?: Y/N \n");
+            decision = Input.next().charAt(0);
+        }
 
-        return true;
+        return decision == 'y' || decision == 'Y';
     }
 
     public static void displayBmiInfo(BodyMassIndex bmi) {
@@ -58,7 +63,12 @@ public class App {
     }
 
     public static void displayBmiStatistics(ArrayList<BodyMassIndex> bmiData) {
+         int counter = 0;
+         int entryAmount = bmiData.size();
+         double averageBMI = BodyMassIndex.totalBMI / entryAmount;
 
+
+        System.out.print("\nThe average BMI among all entries is: " + String.format("%.2f", averageBMI));
     }
 }
 

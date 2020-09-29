@@ -1,11 +1,13 @@
 public class BodyMassIndex {
 
-    public static double bmi;
+    public static double bmi = 0;
     public static String BMICategory;
+    public static double totalBMI = 0;
 
     public BodyMassIndex(double height, double weight) {
         bmi = 703 * weight / (Math.pow(height,2));
         BodyMassCategory();
+        totalBMI += bmi;
     }
 
     public static void BodyMassCategory() {
