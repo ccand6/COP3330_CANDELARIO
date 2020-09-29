@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+//This tests whether the BMI listed matches the actual calculation.
 class BodyMassIndexTest {
     void BodyMassIndex() {
         new BodyMassIndex(65, 150);
@@ -8,6 +9,7 @@ class BodyMassIndexTest {
 
     @org.junit.jupiter.api.Test
 
+    //The following tests determine whether the measured BMIs fit into those categories.
     void bodyMassCategory() {
         new BodyMassIndex(65,100);
         BodyMassIndex.BodyMassCategory();

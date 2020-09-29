@@ -5,12 +5,15 @@ public class BodyMassIndex {
     public static double totalBMI = 0;
     public static int Category = 0;
 
+    //The first method is a simple calculation of BMI. After calculating, it is also added to a totalBMI variable.
+    //This will be used to measure the average BMI of all user inputs.
     public BodyMassIndex(double height, double weight) {
         bmi = 703 * weight / (Math.pow(height,2));
         BodyMassCategory();
         totalBMI += bmi;
     }
 
+    //This method is used to organize and label the user's BMI according to the designated categories.
     public static void BodyMassCategory() {
         if(bmi < 18.5) Category = 1;
         if(bmi >= 18.5 && bmi < 25) Category = 2;
