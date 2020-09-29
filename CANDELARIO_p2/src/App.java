@@ -33,7 +33,7 @@ public class App {
 
     public static double getUserWeight() {
         Scanner Input = new Scanner(System.in);
-        System.out.print("What is your weight in inches?: ");
+        System.out.print("What is your weight in pounds?: ");
         double InputW = Input.nextDouble();
 
         while(InputW <= 0) {
@@ -63,10 +63,9 @@ public class App {
     }
 
     public static void displayBmiStatistics(ArrayList<BodyMassIndex> bmiData) {
-         int counter = 0;
-         int entryAmount = bmiData.size();
-         double averageBMI = BodyMassIndex.totalBMI / entryAmount;
-
+        int counter = 0;
+        int entryAmount = bmiData.size();
+        double averageBMI = BodyMassIndex.totalBMI / entryAmount;
 
         System.out.print("\nThe average BMI among all entries is: " + String.format("%.2f", averageBMI));
     }

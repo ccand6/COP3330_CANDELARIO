@@ -2,21 +2,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BodyMassIndexTest {
     void BodyMassIndex() {
-        BodyMassIndex bmi = new BodyMassIndex(65, 150);
-
-        System.out.print(BodyMassIndex.bmi);
+        new BodyMassIndex(65, 150);
+        assertEquals(24.96,BodyMassIndex.bmi);
     }
 
     @org.junit.jupiter.api.Test
 
     void bodyMassCategory() {
-        int Category = 1;
+        new BodyMassIndex(65,100);
         BodyMassIndex.BodyMassCategory();
-        Category = 2;
+        assertEquals(1,BodyMassIndex.Category);
+        new BodyMassIndex(65,150);
         BodyMassIndex.BodyMassCategory();
-        Category = 3;
+        assertEquals(2,BodyMassIndex.Category);
+        new BodyMassIndex(65,175);
         BodyMassIndex.BodyMassCategory();
-        Category = 4;
+        assertEquals(3,BodyMassIndex.Category);
+        new BodyMassIndex(65,200);
         BodyMassIndex.BodyMassCategory();
+        assertEquals(4,BodyMassIndex.Category);
     }
 }

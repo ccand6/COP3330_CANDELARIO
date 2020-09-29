@@ -3,6 +3,7 @@ public class BodyMassIndex {
     public static double bmi = 0;
     public static String BMICategory;
     public static double totalBMI = 0;
+    public static int Category = 0;
 
     public BodyMassIndex(double height, double weight) {
         bmi = 703 * weight / (Math.pow(height,2));
@@ -11,7 +12,6 @@ public class BodyMassIndex {
     }
 
     public static void BodyMassCategory() {
-        int Category = 0;
         if(bmi < 18.5) Category = 1;
         if(bmi >= 18.5 && bmi < 25) Category = 2;
         if(bmi >= 25 && bmi < 30) Category = 3;
