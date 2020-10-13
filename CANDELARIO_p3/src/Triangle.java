@@ -9,8 +9,7 @@ public class Triangle extends Shape2D {
     String Name;
 
     public Triangle(double base, double height) {
-        getName();
-        getArea();
+        area = base * height;
     }
 
     public String getName() {
@@ -19,9 +18,7 @@ public class Triangle extends Shape2D {
     }
 
     public double getArea() {
-        System.out.print(base + height);
-        area = base * height;
-        return 0;
+        return area;
     }
 
 }

@@ -6,8 +6,7 @@ public class Circle extends Shape2D {
     String Name;
 
     public Circle(double radius) {
-        getName();
-        getArea();
+        area = Math.PI * Math.pow(radius, 2);
     }
 
     public String getName() {
@@ -16,8 +15,7 @@ public class Circle extends Shape2D {
     }
 
     public double getArea() {
-            area = Math.PI * Math.pow(radius, 2);
-        return 0;
+        return area;
     }
 
 }

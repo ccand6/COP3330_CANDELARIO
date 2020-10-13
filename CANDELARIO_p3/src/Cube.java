@@ -1,14 +1,12 @@
 public class Cube extends Shape3D {
     double area;
-    double side = 10;
+    double side;
     double volume;
     String Name;
 
     public Cube() {
-        double side;
-        getName();
-        getArea();
-        getVolume();
+        area = 6 * (side * side);
+        volume = side * side * side;
     }
 
     public String getName() {
@@ -17,12 +15,10 @@ public class Cube extends Shape3D {
     }
 
     public double getArea() {
-        area = 6 * (side * side);
         return area;
     }
 
     public double getVolume() {
-        volume = 3 * side;
         return volume;
     }
 }

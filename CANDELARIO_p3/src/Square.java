@@ -1,11 +1,10 @@
 public class Square extends Shape2D {
-    double area = 0;
-    double side = 10;
+    double area;
+    double side;
     String Name;
 
     public Square(double side) {
-        getName();
-        getArea();
+        area = side * side;
     }
 
     public String getName() {
@@ -14,7 +13,6 @@ public class Square extends Shape2D {
     }
 
     public double getArea() {
-        area = 2 * side;
-        return 0;
+        return area;
     }
 }
