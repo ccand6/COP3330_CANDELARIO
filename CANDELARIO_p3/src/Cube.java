@@ -4,7 +4,7 @@ public class Cube extends Shape3D {
     double volume;
     String Name;
 
-    public Cube() {
+    public Cube(double side) {
         area = 6 * (side * side);
         volume = side * side * side;
     }

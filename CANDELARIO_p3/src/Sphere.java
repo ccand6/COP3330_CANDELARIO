@@ -6,7 +6,7 @@ public class Sphere extends Shape3D {
 
     public Sphere(double radius) {
         area = 4 * Math.PI * Math.pow(radius, 2);
-        volume = (4 / 3) * Math.PI * Math.pow((2 * radius / 2), 3);
+        volume = (4 * (Math.PI * Math.pow((2 * radius / 2), 3)) / 3);
     }
 
     public String getName() {
