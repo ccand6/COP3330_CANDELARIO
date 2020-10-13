@@ -1,5 +1,4 @@
 import java.lang.Math;
-
 public class Circle extends Shape2D {
     double radius;
     double area;
